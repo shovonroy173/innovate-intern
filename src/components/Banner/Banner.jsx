@@ -44,7 +44,7 @@ const Banner = () => {
 
         {/* Text Section */}
         <div className="w-full md:max-w-md flex flex-col items-center space-y-7">
-          <p className="text-gray-900 text-xl font-semibold mb-6">
+          <p className="text-gray-900 w-full text-xl font-semibold mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

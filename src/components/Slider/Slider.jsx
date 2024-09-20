@@ -41,14 +41,14 @@ const Slider = () => {
 
   return (
     <div className=" relative  my-60 ">
-      <div className="absolute -top-40 right-0 flex space-x-8 z-10">
-        <div className="w-[320px] h-[420px]  bg-red-300 "></div>
-        <div className="w-[220px] h-[300px]  bg-purple-300 "></div>
-        <div className="w-[220px] h-[300px]  bg-teal-300 "></div>
+      <div className="absolute -top-32 md:-top-48 right-0 flex space-x-8 z-10">
+        <div className="w-[120px] h-[200px] md:transition-all md:w-[220px] md:h-[340px] lg:w-[320px] lg:h-[420px]  bg-red-300 "></div>
+        <div className="w-[100px] h-[180px] md:transition-all md:w-[120px] md:h-[260px] lg:w-[220px] lg:h-[300px]  bg-purple-300 "></div>
+        <div className="w-[100px] h-[180px] md:transition-all md:w-[120px] md:h-[260px] lg:w-[220px] lg:h-[300px]   bg-teal-300 "></div>
       </div>
-      <div className="flex flex-col relative overflow-x-hidden">
-        <div className=" h-[580px] flex justify-start items-center custom-border-radius">
-          <div className="max-w-6xl ">
+      <div className="flex flex-col  relative overflow-x-hidden">
+        <div className="h-[300px] md:h-[580px] flex justify-center md:justify-start items-center custom-border-radius">
+          <div className="max-w-sm md:max-w-2xl lg:max-w-7xl px-16">
             <Carousel
               plugins={[
                 Autoplay({
@@ -60,9 +60,9 @@ const Slider = () => {
               <CarouselContent>
                 {sliderContent.map((item) => (
                   <CarouselItem key={item.title}>
-                    <div className="w-[400px] ">
+                    <div className="w-full md:w-[400px] ">
                       <p className="text-3xl font-bold">{item.title}</p>
-                      <p className="text-md font-medium">{item.desc}</p>
+                      <p className="text-md font-medium text-wrap">{item.desc}</p>
                     </div>
                   </CarouselItem>
                 ))}
@@ -73,30 +73,30 @@ const Slider = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between z-10">
-          <div className="flex space-x-3">
-            <div className="grid grid-cols-1 w-[400px] gap-3">
-              <div className="w-[400px] h-[400px] bg-green-500 rounded-3xl"></div>
+        <div className="flex flex-col md:flex-row items-center space-y-10 md:space-x-24 justify-center md:justify-between z-10 px-16">
+          <div className="flex space-x-2 md:space-x-4">
+            <div className="grid grid-cols-1 w-[200px] md:w-[400px] gap-3">
+              <div className="w-[200px] h-[300px] md:transition-all md:w-[400px] md:h-[400px] bg-green-500 rounded-3xl"></div>
 
-              <div className="flex justify-between">
+              <div className="flex justify-evenly md:justify-between ">
                 {" "}
-                <div className="w-[120px] h-[120px]  bg-green-500 rounded-3xl "></div>
-                <div className="w-[120px] h-[120px]  bg-green-500 rounded-3xl"></div>
-                <div className="w-[120px] h-[120px]  bg-green-500 rounded-3xl"></div>{" "}
+                <div className="w-[60px] h-[60px] md:transition-all md:w-[120px] md:h-[120px]  bg-neutral-700 rounded-xl md:rounded-3xl "></div>
+                <div className="w-[60px] h-[60px] md:transition-all md:w-[120px] md:h-[120px]  bg-cyan-400 rounded-xl md:rounded-3xl"></div>
+                <div className="w-[60px] h-[60px] md:transition-all md:w-[120px] md:h-[120px]  bg-fuchsia-600 rounded-xl md:rounded-3xl"></div>{" "}
               </div>
             </div>
-            <div className="grid grid-cols-1 w-40">
+            <div className="grid grid-cols-1 w-[40px] ">
               <div className="flex flex-col justify-between">
-                <div className="w-[120px] h-[120px]  bg-green-500 rounded-3xl border-8 border-black"></div>
-                <div className="w-[120px] h-[120px]  bg-green-500 rounded-3xl"></div>
-                <div className="w-[120px] h-[120px]  bg-green-500 rounded-3xl"></div>
-                <div className="w-[120px] h-[120px]  bg-green-500 rounded-3xl"></div>
+                <div className="w-[60px] h-[60px] md:transition-all md:w-[120px] md:h-[120px]  bg-green-500 rounded-xl md:rounded-3xl border-8 border-black"></div>
+                <div className="w-[60px] h-[60px] md:transition-all md:w-[120px] md:h-[120px]  bg-purple-400 rounded-xl md:rounded-3xl"></div>
+                <div className="w-[60px] h-[60px] md:transition-all md:w-[120px] md:h-[120px]  bg-rose-300 rounded-xl md:rounded-3xl"></div>
+                <div className="w-[60px] h-[60px] md:transition-all md:w-[120px] md:h-[120px]  bg-red-600 rounded-xl md:rounded-3xl"></div>
               </div>
             </div>
           </div>
-          <div className="w-[500px]">
-            <p>Collection Featured</p>
-            <p>
+          <div className="w-full md:w-[500px]">
+            <p className="text-3xl font-bold">Collection Featured</p>
+            <p className="text-md font-medium">
               Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do
               eiusmod tet ut labore et dolore magna aliqrit in vol uptate velit
               esse cillumsunt in culpa

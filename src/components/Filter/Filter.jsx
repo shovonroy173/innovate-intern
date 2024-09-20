@@ -122,27 +122,28 @@ const Filter = () => {
     setActiveFilter(filter);
   };
   console.log(activeFilter);
-  
 
   return (
-    <div className="my-40">
-      <h2 className="text-2xl font-bold mb-6">DISCOVER MORE</h2>
-      
+    <div className="my-40 px-16 flex flex-col items-center ">
       {/* Filter Buttons */}
-      <div className="flex space-x-4 mb-6">
-        {filterLinks.map((item) => (
-          <button
-            onClick={() => handleFilterClick(item.url)}
-            key={item.url}
-            className={`px-4 py-2 ${
-              activeFilter === item.url
-                ? "bg-indigo-700 text-white"
-                : "bg-gray-300 text-gray-900 hover:bg-gray-400"
-            } rounded-3xl`}
-          >
-            {item.title}
-          </button>
-        ))}
+      <div>
+      <h2 className="text-2xl font-bold mb-6">DISCOVER MORE</h2>
+        
+        <div className="flex flex-wrap gap-4 mb-6">
+          {filterLinks.map((item) => (
+            <button
+              onClick={() => handleFilterClick(item.url)}
+              key={item.url}
+              className={`px-4 py-2 ${
+                activeFilter === item.url
+                  ? "bg-indigo-700 text-white"
+                  : "bg-gray-300 text-gray-900 hover:bg-gray-400"
+              } rounded-3xl`}
+            >
+              {item.title}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Category Cards */}
@@ -151,7 +152,7 @@ const Filter = () => {
           .filter((category) =>
             activeFilter === "all" ? true : category.key === activeFilter
           )
-          .map((category , index) => (
+          .map((category, index) => (
             <div
               key={index}
               className="shadow-2xl p-4 rounded-lg w-[300px] h-[400px] flex flex-col justify-between"

@@ -5,9 +5,9 @@ import Home from "@/home/page";
 export default function Main() {
   return (
     <Layout>
-      <div className="px-16">
+      {/* <div className="px-16"> */}
         <Home/>
-      </div>
+      {/* </div> */}
     </Layout>
     
   );

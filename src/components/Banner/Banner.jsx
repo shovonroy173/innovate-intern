@@ -19,9 +19,9 @@ const Banner = () => {
         </div>
 
         {/* Photo Section */}
-      <section className="text-black flex flex-col md:flex-row space-y-10 md:justify-between items-center gap-x-20  my-32">
+      <section className="text-black flex flex-col md:flex-row space-y-10 md:justify-between items-center space-x-4 md:space-x-6 lg:space-x-20  my-32">
         {/* Photo Blocks */}
-        <div className=" flex justify-center items-center space-x-10  md:space-x-20">
+        <div className=" flex justify-center items-center space-x-4 md:space-x-8 lg:space-x-20">
           <div className='flex flex-col  items-end space-y-10'>
           <div className="relative w-32 h-32 md:transition-all md:w-52 md:h-52 bg-purple-500 rounded-lg">
             <p className="absolute top-10 md:top-20 left-4 text-white text-md md:text-xl">Photo 1</p>
